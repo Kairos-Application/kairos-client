@@ -18,7 +18,7 @@ import {
 
 export default function InfoScreen({ navigation }) {
   const dispatch = useDispatch();
-  const { firstName, lastName, birth, gender, mobile } = useSelector(
+  const { firstName, lastName, birth, business, gender, mobile } = useSelector(
     (state) => state.user
   );
   const { role } = useSelector((state) => state.general);
@@ -63,7 +63,7 @@ export default function InfoScreen({ navigation }) {
         />
         {role == "provider" && (
           <TextInput
-            value={birth}
+            value={business}
             placeholder="Business name (if applicable)"
             style={styles.textInput}
             onChangeText={(text) => {

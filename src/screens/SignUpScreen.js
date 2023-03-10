@@ -29,24 +29,23 @@ export default function LoginScreen({ navigation }) {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView
-        contentContainerStyle={
-          role == "customer"
-            ? styles.scrollView
-            : [styles.scrollView, { marginTop: 113 }]
-        }
-      >
+      <ScrollView contentContainerStyle={styles.scrollView}>
         {role == "customer" ? (
           <View>
             <Text style={styles.header}>Get Connected</Text>
-            <Text style={[styles.header, { marginBottom: 20 }]}>
+            <Text style={[styles.header, { marginBottom: 14 }]}>
               With The Best!
             </Text>
           </View>
         ) : (
-          <Text style={[styles.header, { marginBottom: 20 }]}>
-            Optimize your time
-          </Text>
+          <View>
+            <Text style={styles.header}>Optimize your</Text>
+            <Text
+              style={[styles.header, { marginBottom: 14, textAlign: "center" }]}
+            >
+              TIME!
+            </Text>
+          </View>
         )}
 
         <View style={styles.textInputGroup}>
@@ -144,7 +143,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     alignItems: "center",
-    marginTop: 50,
+    marginTop: 70,
   },
   header: {
     fontSize: 32,

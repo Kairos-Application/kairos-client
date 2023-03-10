@@ -34,7 +34,7 @@ export default function ProfileScreen({ navigation }) {
   const {
     firstName,
     lastName,
-    age,
+    birth,
     gender,
     email,
     password,
@@ -114,7 +114,7 @@ export default function ProfileScreen({ navigation }) {
         </View>
         <View style={{ flexDirection: "row" }}>
           <TextInput
-            value={age}
+            value={birth}
             style={[styles.textInput, { width: 70.6 }]}
             placeholder={"Birth"}
             onChangeText={(text) => {
